@@ -66,3 +66,4 @@ Generated from running
 sol2uml 0x7F27B0598949DbF9e539BBD217f15BF3F5E97999
 ```
 This uses the verified Solidity code loaded to Etherscan https://etherscan.io/address/0x7F27B0598949DbF9e539BBD217f15BF3F5E97999#code
+0x4e2bd4a9e52ada7b8ea7a717bf40c3470d74e460cfb14b63adad6dac3529ef5110431dce8752ee1419ae6b3b0cd379a67182a5bb8ec540bc9c7785a1811e93661b
