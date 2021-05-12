@@ -45,8 +45,8 @@ A comma separated list of files and folders can also used. For example
     sol2uml contracts,node_modules/openzeppelin-solidity
 
 If an Ethereum address with a 0x prefix is passed, the verified source code from Etherscan will be used. For example
-    sol2uml 0x79fEbF6B9F76853EDBcBc913e6aAE8232cFB9De9
-
+    sol2uml 
+0x0bcEd17B3c0c785657723BB9540fd5AE18c335d6
 Options:
   -b, --baseContractNames <value>              only output contracts connected to these comma separated base contract names
   -f, --outputFormat <value>                   output file format: svg, png, dot or all (default: "svg")
@@ -73,8 +73,8 @@ sol2uml ./contracts
 
 To generate a diagram of EtherDelta's contract from the verified source code on [Etherscan](https://etherscan.io/address/0x8d12A197cB00D4747a1fe03395095ce2A5CC6819#code). The output wil be a svg file `0x8d12A197cB00D4747a1fe03395095ce2A5CC6819.svg` in the working folder.
 ```bash
-sol2uml 0x8d12A197cB00D4747a1fe03395095ce2A5CC6819
-```
+sol2uml 
+```0x0bcEd17B3c0c785657723BB9540fd5AE18c335d6
 
 To generate a diagram of EtherDelta's contract from the verified source code on [Etherscan Ropsten](https://ropsten.etherscan.io/address/0xa19833bd291b66aB0E17b9C6d46D2Ec5fEC15190#code). The output wil be a svg file `0xa19833bd291b66aB0E17b9C6d46D2Ec5fEC15190.svg` in the working folder.
 ```bash
