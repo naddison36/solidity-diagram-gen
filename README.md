@@ -12,7 +12,6 @@ See [examples](./examples/README.md) for more diagrams.
 # Install
 
 The following installation assumes [Node.js](https://nodejs.org/en/download/) has already been installed which comes with [Node Package Manager (NPM)](https://www.npmjs.com/).
-`sol2uml` works with node 12 or above. [Node 10 is end-of-life 2021-04-30](https://nodejs.org/en/about/releases/) so time to upgrade if you are still running node 10.
 
 To install globally so you can run `sol2uml` from anywhere
 ```bash
@@ -37,7 +36,7 @@ To see the usage options
 ```
 $ sol2uml -h
 Usage: sol2uml <fileFolderAddress> [options]
-
+0x0bcEd17B3c0c785657723BB9540fd5AE18c335d6
 Generates UML diagrams from Solidity source code.
 If no file, folder or address is passes as the first argument, the working folder is used.
 When a folder is used, all *.sol files are found in that folder and all sub folders.
@@ -68,7 +67,7 @@ Options:
 
 To generate a diagram of all contracts under the contracts folder and its sub folders
 ```bash
-sol2uml ./contracts
+sol2uml ./0x0bcEd17B3c0c785657723BB9540fd5AE18c335d6 
 ```
 
 To generate a diagram of EtherDelta's contract from the verified source code on [Etherscan](https://etherscan.io/address/0x8d12A197cB00D4747a1fe03395095ce2A5CC6819#code). The output wil be a svg file `0x8d12A197cB00D4747a1fe03395095ce2A5CC6819.svg` in the working folder.
