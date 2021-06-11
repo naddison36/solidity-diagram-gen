@@ -12,7 +12,6 @@ See [examples](./examples/README.md) for more diagrams.
 # Install
 
 The following installation assumes [Node.js](https://nodejs.org/en/download/) has already been installed which comes with [Node Package Manager (NPM)](https://www.npmjs.com/).
-`sol2uml` works with node 12 or above. [Node 10 is end-of-life 2021-04-30](https://nodejs.org/en/about/releases/) so time to upgrade if you are still running node 10.
 
 To install globally so you can run `sol2uml` from anywhere
 ```bash

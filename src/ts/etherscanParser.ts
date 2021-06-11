@@ -98,19 +98,15 @@ export class EtherscanParser {
                     )
                 }
                 // if multiple Solidity source files
+                // I think this is an Etherscan bug where the SourceCode field is encodes in two curly brackets. eg {{}}
                 if (result.SourceCode[0] === '{') {
+                    // remove first { and last } from the SourceCode string so it can be JSON parsed
+                    const parableResultString = result.SourceCode.slice(1, -1)
                     try {
-                        let parableResultString = result.SourceCode
-                        // This looks like an Etherscan bug but we'll handle it here
-                        if (result.SourceCode[1] === '{') {
-                            // remove first { and last } from the SourceCode string so it can be JSON parsed
-                            parableResultString = result.SourceCode.slice(1, -1)
-                        }
                         const sourceCodeObject = JSON.parse(parableResultString)
-                        // The getsource response from Etherscan is inconsistent so we need to handle both shapes
-                        const sourceFiles = sourceCodeObject.sources
-                            ? Object.entries(sourceCodeObject.sources)
-                            : Object.entries(sourceCodeObject)
+                        const sourceFiles = Object.entries(
+                            sourceCodeObject.sources
+                        )
                         return sourceFiles.map(
                             ([filename, code]: [
                                 string,
@@ -144,9 +140,6 @@ export class EtherscanParser {
             })
             return results.flat(1)
         } catch (err) {
-            if (err.message) {
-                throw err
-            }
             if (!err.response) {
                 throw new Error(`Failed to ${description}. No HTTP response.`)
             }
