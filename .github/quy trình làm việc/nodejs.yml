@@ -1,4 +1,4 @@
-name: Node CI
+[![Node CI](https://github.com/naddison36/sol2uml/actions/workflows/nodejs.yml/badge.svg?branch=etherscan-multifile-fix&event=pull_request_target)](https://github.com/naddison36/sol2uml/actions/workflows/nodejs.yml)
 
 on: [push]
 
